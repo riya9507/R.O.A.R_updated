@@ -1,4 +1,4 @@
-# R.O.A.R — Tiger Intelligence Frontend
+# R.O.A.R — Robust Offline Analytics & Re-identification
 
 R.O.A.R is a tiger-only field intelligence UI for Pench Tiger Reserve.
 
