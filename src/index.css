@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 13.5px;
+  }
+  ::selection {
+    @apply bg-amber/30;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A362E;
+    border-radius: 4px;
+  }
+  :focus-visible {
+    outline: 2px solid #C97A3D;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Signature motif: thin diagonal stripe pattern echoing the flank-stripe
+     biometric that the whole identification pipeline is built around.
+     Used sparingly — panel headers and empty states only. */
+  .stripe-field {
+    background-image: repeating-linear-gradient(
+      115deg,
+      rgba(201, 122, 61, 0.08) 0px,
+      rgba(201, 122, 61, 0.08) 1.5px,
+      transparent 1.5px,
+      transparent 13px
+    );
+  }
+
+  .panel {
+    @apply bg-panel border border-border rounded-md;
+  }
+
+  .label-eyebrow {
+    @apply text-[10px] tracking-[0.14em] uppercase text-inkFaint font-medium;
+  }
+}
+
+.roar-tooltip {
+  background: #141C17 !important;
+  border: 1px solid #25322A !important;
+  color: #E7EDE8 !important;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px !important;
+  box-shadow: none !important;
+}
+.roar-tooltip::before {
+  display: none !important;
+}
+.leaflet-container {
+  background: #0D1310 !important;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.detail-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #5C6B62;
+  margin-bottom: 3px;
+}
+.detail-label + b { font-size: 11px; font-weight: 500; color: #E7EDE8; }
